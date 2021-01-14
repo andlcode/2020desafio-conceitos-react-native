@@ -14,9 +14,9 @@ export default function App() {
   const [repositories, setRepositories] = useState([]);
 
   useEffect(() => {
-    api.get("/repositories").then((response) => {
+    api.get("repositories").then((response) => {
+      console.log(response.data);
       setRepositories(response.data);
-      console.log(reponse.data);
     });
   }, []);
 
@@ -26,7 +26,7 @@ export default function App() {
     const likedRepository = response.data;
 
     const repositoriesUpdated = repositories.map((repository) => {
-      if (repository.id == id) {
+      if (repository.id === id) {
         return likedRepository;
       } else {
         return repository;
