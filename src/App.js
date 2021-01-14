@@ -42,7 +42,7 @@ export default function App() {
         <FlatList
           data={repositories}
           keyExtractor={(repository) => repository.id}
-          renderItem={({ item: repository }) => {
+          renderItem={({ item: repository }) => (
             <View style={styles.repositoryContainer}>
               <Text style={styles.repository}>{repository.title}</Text>
 
@@ -70,8 +70,8 @@ export default function App() {
               >
                 <Text style={styles.buttonText}>{repository.like}</Text>
               </TouchableOpacity>
-            </View>;
-          }}
+            </View>
+          )}
         />
       </SafeAreaView>
     </>
