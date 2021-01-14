@@ -1,6 +1,6 @@
 <div align = "center">
 
-<img src="../media/banner.png" alt="banner">
+<img src="./media/banner.png" alt="banner">
 
 # React Native Challenge Delivered
 
